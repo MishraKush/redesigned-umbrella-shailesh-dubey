@@ -4,28 +4,38 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
+    outline: none;
 }
 :root{
     --primary-color: rgb(2, 27, 103);
     --sky-blue: rgb(11, 168, 230, 0.7);
+    --gray: rgb(115,115,114);
+    --gray-light: rgb(115,115,114,0.6);
 }
 .background{
     background: var(--sky-blue) url('../images/pediatric1.jpg') ;
     background-size: cover;
     background-blend-mode: darken;
-    opacity: ;
 }
 
 .navbar{
     display: flex;
     justify-content: space-between;
     padding : 0.3rem 15rem;
-    background-color: var(--sky-blue);
+    box-shadow: 2px 2px 5px var(--gray-light);
 }
 
 .logo{
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.logo-text{
+    padding: 0 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--gray);
 }
 
 .logo img{
@@ -46,6 +56,18 @@
 }
 
 .list-items a{
-    color: black;
+    color: var(--gray);
     text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: ease 0.5s;
+}
+
+
+.list-items:hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: var(--gray-light);
+    text-decoration-thickness: 1.5px;
+    transform: translateY(-5px)   
 }
